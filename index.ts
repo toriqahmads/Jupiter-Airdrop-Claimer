@@ -127,13 +127,13 @@ export const createClaimInstruction = async (token_address: PublicKey, from: Key
   const claimInfo = await getClaimInfo(wallet.publicKey.toString());
   const ATASource = await getATA(TOKEN_ID, wallet.publicKey);
   const ATADestination = await getATA(TOKEN_ID, TRANSFER_TO);
-  const createAtaInstructionSource = await createATAInstruction(TOKEN_ID, wallet.publicKey, ATASource, wallet.publicKey);
+  // const createAtaInstructionSource = await createATAInstruction(TOKEN_ID, wallet.publicKey, ATASource, wallet.publicKey);
   const createAtaInstructionDestination = await createATAInstruction(TOKEN_ID, TRANSFER_TO, ATADestination, wallet.publicKey);
   const claimInstruction = await createClaimInstruction(TOKEN_ID, wallet, claimInfo);
   const transferInstruction = await createTransferTokenInstruction(TOKEN_ID, ATASource, ATADestination, wallet.publicKey, claimInfo.amount);
 
   const transaction = new Transaction()
-    .add(createAtaInstructionSource)
+    // .add(createAtaInstructionSource)
     .add(createAtaInstructionDestination)
     .add(claimInstruction)
     .add(transferInstruction)
