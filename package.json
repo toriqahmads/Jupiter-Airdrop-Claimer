@@ -1,6 +1,6 @@
 {
   "name": "jupiter-airdrop-claimer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toriqahmads/Jupiter-Airdrop-Claimer.git"
+  },
   "dependencies": {
     "@coral-xyz/borsh": "^0.29.0",
     "@project-serum/anchor": "^0.26.0",
